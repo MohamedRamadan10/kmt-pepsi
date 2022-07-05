@@ -151,7 +151,7 @@ $redColor: #ee2216;
 body {
 	font-family: "Tajawal", sans-serif;
 	font-weight: 600;
-	background: #fff;
+	background: linear-gradient(270deg, #0f294b, #1d447c);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -165,69 +165,72 @@ body {
 	padding: 0px 30px;
 }
 
-.banner {
-	position: relative;
-	img {
-		min-width: 100vw;
-		width: 100%;
-		min-height: 100vh;
-		height: 100%;
-		display: none;
-		&.lg {
-			@media (min-width: 992px) {
-				display: block;
-			}
-		}
-		&.md {
-			@media (min-width: 768px) and (max-width: 991px) {
-				display: block;
-			}
-		}
-		&.sm {
-			@media (max-width: 767px) {
-				display: block;
-			}
-		}
-	}
-}
 .timer {
 	position: absolute;
-	bottom: 40px;
-	@media (min-width: 992px) {
-		bottom: 48px;
-		left: 14%;
-		transform: none;
-	}
+	bottom: auto;
+	top: 94%;
+	left: 66%;
+	transform: translate(-62%, 0);
+	text-align: center;
+	display: inline-block;
 	@media (max-width: 991px) {
-		bottom: 52px;
-		left: 10%;
-		transform: none;
+		top: 90%;
+		left: 42%;
 	}
 	@media (max-width: 767px) {
-		left: 50%;
-		transform: translate(-50%, 0);
+		left: 27%;
+		top: 74%;
+	}
+	&.timer__two {
+		bottom: auto;
+		top: 90%;
+		left: 66%;
+		transform: translate(-56%, 0);
+		text-align: center;
+		display: inline-block;
+		@media (max-width: 991px) {
+			left: 44%;
+			top: 85%;
+		}
+		@media (max-width: 767px) {
+			left: 40%;
+			top: 85%;
+		}
 	}
 	.time {
 		min-width: 52px;
 		text-align: center;
 		color: #fff;
-		font-size: 1.5rem;
+		font-size: 20px;
 		font-weight: bold;
-		padding: 10px 32px;
+		padding: 5px 28px;
 		border-radius: 10px;
 		background: $redColor;
 
 		@media (max-width: 767px) {
-			font-size: 1rem;
+			font-size: 16px;
 		}
 	}
 }
 
 .video {
-	max-width: 450px;
 	margin: 0 auto;
-	@media (min-width: 768px) {
-		margin-top: 50px;
+	position: absolute;
+	max-width: 311px;
+	top: 9%;
+	right: 8%;
+	@media (max-width: 991px) {
+		max-width: 300px;
+		top: 26%;
+		right: initial;
+	}
+	@media (max-width: 767px) {
+		top: 26%;
+		max-width: 320px;
+		right: inherit;
+	}
+	.widget-container {
+		width: 100% !important;
 	}
 }
 
@@ -385,4 +388,58 @@ body {
 			box-shadow: 0 0 0 0.25rem #265eb080;
 		}
 	}
+}
+
+.banner__one {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	.images {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+			filter: drop-shadow(0 0 10px rgba(#fff, 0.1));
+			&.lg {
+				display: none;
+				@media (min-width: 992px) {
+					display: block;
+				}
+			}
+			&.md {
+				display: none;
+				@media (min-width: 768px) and (max-width: 991px) {
+					display: block;
+				}
+			}
+			&.sm {
+				display: none;
+				@media (max-width: 767px) {
+					display: block;
+				}
+			}
+		}
+	}
+	&.banner__two {
+		.images {
+			img {
+				object-fit: fill;
+				@media (max-width: 991px) {
+					object-fit: contain;
+				}
+				@media (max-width: 767px) {
+					object-fit: fill;
+				}
+			}
+		}
+	}
+}
+
+.spk-stand-wg.sp-mobile .sp-title-container p {
+	font-size: 2vw !important;
 }
