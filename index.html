@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+   <meta name="description"
+      content="شركه كيميت KMT هي شركه مصرية تاسست عام 2016 وقامت بتنفيذ بعض المشروعات الاعلاميه في مرافق السكة الحديد و مترو انفاق القاهرة الكبرى ذات طابع ثقافي خدمي.
+    ويعد مشروع توفير خدمه انترنت مجاني Wi-Fi داخل محطة مصر برمسيس احد وسائل تعظيم خدمات القيمة المضافة لمرفق السكة الحديد وزيادة مواردها وجذب شرائح مختلفه من الجمهور بالاضافه الى تعزيز الصوره العالميه للمحطه وقطاع النقل بصفه عامه امام رواد المحطه من المواطنين والسائحين" />
+   <meta name="keywords" content="KMT, Wi-Fi, Ramsis Station, Train" />
+   <meta name="author" content="KMT Wi-Fi" />
+
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png" />
+   <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png" />
+   <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png" />
+   <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png" />
+   <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png" />
+   <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png" />
+   <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png" />
+   <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png" />
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png" />
+   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png" />
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+   <link rel="manifest" href="assets/favicon/manifest.json" />
+   <meta name="msapplication-TileColor" content="#ffffff" />
+   <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
+   <meta name="theme-color" content="#ffffff" />
+   <title>KMT Wi-Fi</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="assets/css/styles.min.css" />
+   <script>
+      var secondsOne = 10;
+      var fooOne;
+
+      function redirectOne() {
+         document.location.href = "check.html";
+      }
+
+      function updateSecsOne() {
+         document.getElementById("secondsOne").innerHTML = secondsOne;
+         secondsOne--;
+         if (secondsOne == -1) {
+            clearInterval(fooOne);
+            document.getElementById("secondsOne").innerHTML = "التالي";
+            redirectOne();
+         }
+      }
+
+      function countdownTimer() {
+         fooOne = setInterval(function () {
+            updateSecsOne();
+         }, 1000);
+      }
+
+      countdownTimer();
+   </script>
+</head>
+
+<body>
+   <div class="banner">
+      <img src="assets/images/body-lg-1.jpg" class="lg" alt="pepsi" />
+      <img src="assets/images/body-lg-1.jpg" class="md" alt="pepsi" />
+      <img src="assets/images/764 X 1024.jpg" class="sm" alt="pepsi" />
+      <div class="timer">
+         <span class="time" id="secondsOne">10</span>
+      </div>
+   </div>
+</body>
+
+</html>
