@@ -151,15 +151,12 @@ $redColor: #ee2216;
 body {
 	font-family: "Tajawal", sans-serif;
 	font-weight: 600;
-	background: #02102a url(../images/body-all.jpg) no-repeat center center/cover;
+	background: #fff;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	&.form__page {
-		background: #fff;
-	}
 }
 
 .container {
