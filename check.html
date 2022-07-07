@@ -34,30 +34,30 @@
    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet" />
    <link rel="stylesheet" href="assets/css/styles.min.css" />
    <script>
-      // var secondsOne = 30;
-      // var fooOne;
+      var secondsOne = 30;
+      var fooOne;
 
-      // function redirectOne() {
-      //    document.location.href = "https://mohamedramadan10.github.io/kmt-pepsi/connect.html";
-      // }
+      function redirectOne() {
+         document.location.href = "https://mohamedramadan10.github.io/kmt-pepsi/connect.html";
+      }
 
-      // function updateSecsOne() {
-      //    document.getElementById("secondsOne").innerHTML = secondsOne;
-      //    secondsOne--;
-      //    if (secondsOne == -1) {
-      //       clearInterval(fooOne);
-      //       document.getElementById("secondsOne").innerHTML = "التالي";
-      //       redirectOne();
-      //    }
-      // }
+      function updateSecsOne() {
+         document.getElementById("secondsOne").innerHTML = secondsOne;
+         secondsOne--;
+         if (secondsOne == -1) {
+            clearInterval(fooOne);
+            document.getElementById("secondsOne").innerHTML = "التالي";
+            redirectOne();
+         }
+      }
 
-      // function countdownTimer() {
-      //    fooOne = setInterval(function () {
-      //       updateSecsOne();
-      //    }, 1000);
-      // }
+      function countdownTimer() {
+         fooOne = setInterval(function () {
+            updateSecsOne();
+         }, 1000);
+      }
 
-      // countdownTimer();
+      countdownTimer();
    </script>
 </head>
 
